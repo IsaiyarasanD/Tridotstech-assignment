@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Report</title>
+</head>
+<body>
+    <h1>Product Balance Report</h1>
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>Warehouse</th>
+            <th>Quantity</th>
+        </tr>
+        {% for data in report_data %}
+        <tr>
+            <td>{{ data.product }}</td>
+            <td>{{ data.warehouse }}</td>
+            <td>{{ data.qty }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

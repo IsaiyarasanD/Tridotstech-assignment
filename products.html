@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Products</title>
+</head>
+<body>
+    <h1>Products</h1>
+    <form method="POST" action="{{ url_for('products') }}">
+        <input type="text" name="product_id" placeholder="Product ID">
+        <button type="submit">Add Product</button>
+    </form>
+    <ul>
+        {% for product in products %}
+        <li>{{ product.product_id }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
